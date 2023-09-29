@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+
+            align-self: center;
+
+        }
+
+        header {
+            background-color: #303030;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .project {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .project:hover {
+            background-color: #f5f5f5;
+        }
+
+        .project-details {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Arthur Ferraz Ávila</h1>
+    </header>
+
+    <div class="container">
+        <h2>Portfólio</h2>
+
+        <div class="project" id="project1">
+            <h3>Especialidades</h3>
+            <p> <b>Design / Desenvolvimento de Sistemas / Engenharia</b></p>
+            <div class="project-details" id="details1">
+                <b>Curso Tecnico:</b> Análise e Desenvolvimento de Sistemas - <i>ETE: porto digital</i><br>
+                <b>Graduação:</b> Engenharia - <i>UFPE</i><br> 
+                <b>Graduação:</b> Análise e Desenvolvimento de Sistemas - <i>Faculdade Senac</i><br>
+                <b>Curso Fast:</b> Design de Produtos - <i>Cesar School</i><br>
+            </div>  
+        </div>
+
+        <div class="project" id="project2">
+            <h3>Experiencias</h3>
+            <p><b>Acessor de Comunicação / Criador de Conteúdo Digital</b></p>
+            <div class="project-details" id="details2">
+                <b>Acessor de Comunicação:</b> Gestão Regional da Educação PE - 2023<br>
+                <b>Criador de Conteúdo Digital:</b> Gestão Regional da Educação PE - 2023<br>
+            </div>
+        </div>
+
+        <div class="project" id="project3">
+            <h3>Certificados e Diplomas</h3>
+
+            <div class="project-details" id="details3">
+                <img src="CertificadoCesarArthur.png" width="200px" target="" alt="certificado cesar">
+                <img src="CertificadoPierreLucena.png" width="200px" target="" alt="certificado demoday">
+            </div>
+        </div>
+
+        <div class="project" id="project4">
+           <h3>Contatos</h3>
+            <div class="project-details" id="details4">
+                <b>Endereço:</b> Rua Engenheiro Sampaio - 126 <br>
+                <b>Email:</b> arthurferrazavila@gmail.com <br> 
+                <b>Linkedin:</b> 
+                <a href="https://br.linkedin.com/in/everton-barbosa-abb53121b" target="_blank" title="Currículo"> Arthur Ferraz</a><br>
+                <b>Telefone:</b> (81) 99751-5967 
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script>
+        // JavaScript básico para mostrar/ocultar detalhes do projeto ao clicar
+        const projects = document.querySelectorAll('.project');
+
+        projects.forEach((project, index) => {
+            project.addEventListener('click', () => {
+                const details = document.getElementById(`details${index + 1}`);
+                if (details.style.display === 'block') {
+                    details.style.display = 'none';
+                } else {
+                    details.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
